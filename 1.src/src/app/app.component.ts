@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, HostListener} from '@angular/core';
+import {DataService} from "./services/data.service";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularSeminaire';
+
+
+  constructor(private data: DataService) {
+
+  }
+
+  @HostListener("window:beforeunload",["$event"])
+  unloadNotification($event:any){
+    sessionStorage.setItem("user",JSON.stringify(this.data.curUser));
+    sessionStorage.setItem("users",JSON.stringify(this.data.users))
+  }
 }
