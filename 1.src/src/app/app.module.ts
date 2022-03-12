@@ -18,7 +18,7 @@ import { ComponentsModule } from './commun/components/components.module';
     TestComponent,
     LoginComponent,
     HomeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
