@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { RouterModule } from '@angular/router';
 import { ComponentsModule } from './commun/components/components.module';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ComponentsModule } from './commun/components/components.module';
     BrowserAnimationsModule,
     MatCardModule,
     RouterModule,
-    ComponentsModule
+    ComponentsModule,
+    FormsModule
   ],
   exports : [],
   providers: [],

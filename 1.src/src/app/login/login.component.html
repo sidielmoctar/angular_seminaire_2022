@@ -1,31 +1,39 @@
 <div>
-    
-    <mat-card>
-        <form>
-            <div class="row mt-5">
-                <div class="col-sm-4"></div>
-                <div class="col-sm-4">
-                    <label>Login</label>
-                    <input class="form-control" type="text">
-                </div>
-                <div class="col-sm-4"></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4"></div>
-                <div class="col-sm-4">
-                    <label>Mot de passe</label>
-                    <input class="form-control" type="password">
-                </div>
-                <div class="col-sm-4"></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4"></div>
-                <div class="col-sm-4 mt-2">
-                    <button class="btn btn-primary" [routerLink]="'/home'">Se connecter</button>
-                </div>
-                <div class="col-sm-4"></div>
-            </div>
-        </form>
-    </mat-card>
+
+  <mat-card>
+    <div>
+      <div class="row mt-5">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+          <label>Login</label>
+          <input class="form-control"
+                 [(ngModel)]="user.firstName"
+                 type="text">
+        </div>
+        <div class="col-sm-4"></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+          <label>Mot de passe</label>
+          <input class="form-control"
+                 [(ngModel)]="user.mdp"
+                 type="password">
+        </div>
+        <div class="col-sm-4"></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4 mt-2">
+          <button class="btn btn-primary" (click)="logIn(user)">Se connecter</button>
+          <div class="mt-2">
+            <msg-danger [msg]="'Email ou mot de passe incorrecte!'"
+                        *ngIf="msgErr"></msg-danger>
+          </div>
+        </div>
+        <div class="col-sm-4"></div>
+      </div>
+    </div>
+  </mat-card>
 </div>
 

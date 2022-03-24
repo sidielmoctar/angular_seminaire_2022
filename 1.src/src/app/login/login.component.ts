@@ -9,6 +9,10 @@ import {UtilService} from "../services/util.service";
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  public msgErr = false;
+  public user: IUser = {
+    dateN: "", email: "", firstName: "", id: 0, mdp: "", profil: "", tel: ""
+  }
 
   constructor(private auth: AuthService, private util: UtilService) { }
 
@@ -18,11 +22,9 @@ export class LoginComponent implements OnInit {
   logIn(user: IUser) {
     if(this.auth.logIn(user)) {
       this.util.navigateTo("home");
+    } else {
+      this.msgErr = true;
     }
-  }
-
-  logOut() {
-    
   }
 
 }
