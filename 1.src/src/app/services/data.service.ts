@@ -6,7 +6,7 @@ import dbContent from '../../assets/data/db.json'
   providedIn: 'root'
 })
 export class DataService {
-  private _curUser: IUser = <any>{};
+  private _curUser: IUser = <IUser>{};
   private _users: IUser[] = [];
 
   constructor() {

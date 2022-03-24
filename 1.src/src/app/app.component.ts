@@ -15,8 +15,7 @@ export class AppComponent {
   }
 
   @HostListener("window:beforeunload",["$event"])
-  unloadNotification($event:any){
+  unloadNotification($event:any) {
     sessionStorage.setItem("user",JSON.stringify(this.data.curUser));
-    sessionStorage.setItem("users",JSON.stringify(this.data.users))
   }
 }

@@ -23,7 +23,7 @@
         { "firstName": "Bede", "mdp": "12345", "tel": "42314768", "email": "dm@gmail.com", "dateN": "2000-12-12", "profil": "test", "id": 19 }
     ],
     "version": {
-        "desc": "ClassRide - gestion des courses",
+        "desc": "Semainaire - gestion des courses",
         "number": "1.7",
         "date": "13:00 14 avril 2020"
     },
